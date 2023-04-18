@@ -1,0 +1,148 @@
+/* Preparation */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  scroll-padding-top: 2rem;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --main-color: #008148;
+  --second-color: #1e3932;
+}
+
+section {
+  padding: 50px 10%;
+}
+
+img {
+  width: 100%;
+}
+
+/* navbar */
+.logo img {
+  width: 40px;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  box-shadow: 0 4px 41px rgb(14 55 54 / 14%);
+  padding: 15px 10%;
+  transition: 0.2s;
+  width: 100%;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar {
+  display: flex;
+}
+
+.navbar a {
+  padding: 11px 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 1rem;
+  color: var(--second-color);
+}
+
+.navbar a:hover {
+  color: var(--main-color);
+}
+
+#menu-icon {
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1001;
+  display: none;
+}
+
+/* home */
+*::selection {
+  color: #fff;
+  background-color: var(--main-color);
+}
+
+.home {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: #ebdbc8;
+  gap: 1rem;
+}
+
+.home-text {
+  flex: 1 1 17rem;
+}
+
+.home-img {
+  flex: 1 1 17rem;
+}
+
+.home-img img {
+  animation: animate 3s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    transform: translate(0px, -11px);
+  }
+  50% {
+    transform: translate(-11px, 0px);
+  }
+  100% {
+    transform: translate(0px, -11px);
+  }
+}
+
+.home-text span {
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--second-color);
+}
+
+.home-text h1 {
+  font-size: 3.2rem;
+  color: var(--main-color);
+  font-weight: bolder;
+}
+
+.home-text h2 {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--second-color);
+  padding: 0.5rem 0 1.4rem;
+}
+
+.btn {
+  border: 2px solid var(--second-color);
+  border-radius: 40px;
+  padding: 7px 16px;
+  color: var(--second-color);
+  font-weight: 500;
+}
+
+.btn:hover {
+  background-color: var(--second-color);
+  color: #fff;
+}
